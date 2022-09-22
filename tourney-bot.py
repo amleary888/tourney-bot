@@ -1,6 +1,9 @@
 import discord
 import os
 import challonge
+import sqlite3
+
+conn = sqlite3.connect()
 
 challonge.set_credentials("L_eary", os.getenv('CHALLONGE'))
 
