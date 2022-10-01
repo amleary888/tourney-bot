@@ -25,6 +25,9 @@ class MyClient(discord.Client):
 def createDataBase():
     c.execute("""CREATE TABLE tournies (
         tourneyID integer,
+        TOChallongeID
+        tourneyName
+        tourneyNumber
         
         )""")
 
