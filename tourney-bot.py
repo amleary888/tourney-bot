@@ -14,7 +14,7 @@ class MyClient(discord.Client):
         print(f'Logged on as {self.user}!')
 
     async def on_message(self, message):
-        #print(f'Message from {message.author}: {message.content}')
+        print(f'Message from {message.author}: {message.content} in {message.guild}')
 
         if message.author != self.user:
 
@@ -22,7 +22,7 @@ class MyClient(discord.Client):
                 if message.content.split(" ")[1] == "hi":
                     await message.channel.send("Hello!")
 
-def createDataBase():
+def createDataBase(): 
     c.execute("""CREATE TABLE tournies (
         tourneyID integer,
         challongeID text,
@@ -31,7 +31,7 @@ def createDataBase():
         
         )""")
 
-createDataBase()
+#createDataBase()
 
 intents = discord.Intents.default()
 intents.message_content = True
