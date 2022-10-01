@@ -25,8 +25,10 @@ class MyClient(discord.Client):
 def createDataBase():
     c.execute("""CREATE TABLE tournies (
         tourneyID integer,
-        
+        challongeID text
         )""")
+
+createDataBase()
 
 intents = discord.Intents.default()
 intents.message_content = True
