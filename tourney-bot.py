@@ -25,14 +25,10 @@ class MyClient(discord.Client):
 def createDataBase():
     c.execute("""CREATE TABLE tournies (
         tourneyID integer,
-<<<<<<< HEAD
-        challongeID text
-=======
         TOChallongeID
         tourneyName
         tourneyNumber
         
->>>>>>> ded3cbb28703b1c53a67b0e740e05086ba2cd7c2
         )""")
 
 createDataBase()
